@@ -70,7 +70,7 @@ const translations = {
             whatsappNote: "Click to chat on WhatsApp",
             email: "Email",
             location: "Location",
-            locationValue: "Turkey"
+            locationValue: "Keçiören, Ankara, Turkey"
         },
         
         // Footer
@@ -152,7 +152,7 @@ const translations = {
             whatsappNote: "WhatsApp'ta sohbet etmek için tıklayın",
             email: "E-posta",
             location: "Konum",
-            locationValue: "Türkiye"
+            locationValue: "Keçiören, Ankara, Türkiye"
         },
         
         // Alt Bilgi
