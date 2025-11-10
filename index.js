@@ -148,25 +148,34 @@ animateElements.forEach(el => {
 });
 
 // Typing effect for hero subtitle (optional enhancement)
-const subtitle = document.querySelector('.hero-subtitle');
-if (subtitle) {
-    const text = subtitle.textContent;
-    subtitle.textContent = '';
-    let i = 0;
-    
-    const typeWriter = () => {
-        if (i < text.length) {
-            subtitle.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 100);
-        }
-    };
-    
-    // Start typing effect after page load
-    window.addEventListener('load', () => {
-        setTimeout(typeWriter, 500);
-    });
+let typingInProgress = false;
+
+function startTypingEffect() {
+    const subtitle = document.querySelector('.hero-subtitle');
+    if (subtitle && !typingInProgress) {
+        typingInProgress = true;
+        const text = subtitle.textContent;
+        subtitle.textContent = '';
+        let i = 0;
+        
+        const typeWriter = () => {
+            if (i < text.length) {
+                subtitle.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            } else {
+                typingInProgress = false;
+            }
+        };
+        
+        typeWriter();
+    }
 }
+
+// Start typing effect after translations are loaded
+document.addEventListener('translationsLoaded', () => {
+    setTimeout(startTypingEffect, 300);
+});
 
 // Add loading animation
 window.addEventListener('load', () => {

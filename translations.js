@@ -174,6 +174,8 @@ function setLanguage(lang) {
     document.documentElement.lang = lang;
     updatePageContent();
     updateLanguageButtons();
+    // Trigger typing effect on home page after language change
+    document.dispatchEvent(new Event('translationsLoaded'));
 }
 
 function updateLanguageButtons() {
@@ -215,4 +217,6 @@ function updatePageContent() {
 // Initialize language on page load
 document.addEventListener('DOMContentLoaded', () => {
     setLanguage(currentLanguage);
+    // Dispatch custom event to notify that translations are loaded
+    document.dispatchEvent(new Event('translationsLoaded'));
 });
