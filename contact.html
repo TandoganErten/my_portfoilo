@@ -21,17 +21,21 @@
             <div class="nav-brand">
                 <a href="index.html">Tandogan Erten</a>
             </div>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+                <button class="lang-btn" data-lang="tr" onclick="setLanguage('tr')">TR</button>
+            </div>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="skills.html" class="nav-link">Skills</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="skills.html" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="projects.html" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -39,8 +43,8 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Get In Touch</h1>
-            <p>Let's work together on your next project</p>
+            <h1 data-i18n="contact.pageTitle">Get In Touch</h1>
+            <p data-i18n="contact.pageSubtitle">Let's work together on your next project</p>
         </div>
     </section>
 
@@ -53,9 +57,9 @@
                         <i class="fab fa-whatsapp"></i>
                     </div>
                     <div>
-                        <h3>WhatsApp</h3>
+                        <h3 data-i18n="contact.whatsapp">WhatsApp</h3>
                         <p><a href="https://wa.me/905XXXXXXXXX" target="_blank" rel="noopener noreferrer">+90 5XX XXX XX XX</a></p>
-                        <span class="contact-note">Click to chat on WhatsApp</span>
+                        <span class="contact-note" data-i18n="contact.whatsappNote">Click to chat on WhatsApp</span>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -63,7 +67,7 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <div>
-                        <h3>Email</h3>
+                        <h3 data-i18n="contact.email">Email</h3>
                         <p><a href="mailto:contact@tandoganerten.com">contact@tandoganerten.com</a></p>
                     </div>
                 </div>
@@ -72,8 +76,8 @@
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <div>
-                        <h3>Location</h3>
-                        <p>Turkey</p>
+                        <h3 data-i18n="contact.location">Location</h3>
+                        <p data-i18n="contact.locationValue">Turkey</p>
                     </div>
                 </div>
             </div>
@@ -86,19 +90,19 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Tandogan Erten</h3>
-                    <p>Professional Web Developer & Designer</p>
+                    <p data-i18n="footer.description">Professional Web Developer & Designer</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="footer.quickLinks">Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                        <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Connect</h4>
+                    <h4 data-i18n="footer.connect">Connect</h4>
                     <div class="footer-social">
                         <a href="https://github.com/TandoganErten" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -107,7 +111,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Tandogan Erten. All rights reserved.</p>
+                <p>&copy; 2025 Tandogan Erten. <span data-i18n="footer.rights">All rights reserved.</span></p>
             </div>
         </div>
     </footer>
@@ -116,6 +120,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <script src="translations.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

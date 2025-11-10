@@ -21,17 +21,21 @@
             <div class="nav-brand">
                 <a href="index.html">Tandogan Erten</a>
             </div>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+                <button class="lang-btn" data-lang="tr" onclick="setLanguage('tr')">TR</button>
+            </div>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link active">About</a></li>
-                <li><a href="skills.html" class="nav-link">Skills</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" class="nav-link active" data-i18n="nav.about">About</a></li>
+                <li><a href="skills.html" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="projects.html" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -39,8 +43,8 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>About Me</h1>
-            <p>Get to know more about my journey and expertise</p>
+            <h1 data-i18n="about.pageTitle">About Me</h1>
+            <p data-i18n="about.pageSubtitle">Get to know more about my journey and expertise</p>
         </div>
     </section>
 
@@ -52,24 +56,24 @@
                     <img src="images/profile.jpg" alt="Tandogan Erten - Professional Portrait">
                 </div>
                 <div class="about-text">
-                    <h3>Hello! I'm Tandogan Erten</h3>
-                    <p>I'm a passionate web developer and designer with a keen eye for detail and a love for creating exceptional digital experiences. With expertise in modern web technologies, I transform ideas into elegant, functional solutions.</p>
-                    <p>My approach combines technical proficiency with creative problem-solving, ensuring that every project not only meets but exceeds expectations. I'm committed to continuous learning and staying ahead of industry trends.</p>
+                    <h3 data-i18n="about.greeting">Hello! I'm Tandogan Erten</h3>
+                    <p data-i18n="about.bio1">I'm a passionate web developer and designer with a keen eye for detail and a love for creating exceptional digital experiences. With expertise in modern web technologies, I transform ideas into elegant, functional solutions.</p>
+                    <p data-i18n="about.bio2">My approach combines technical proficiency with creative problem-solving, ensuring that every project not only meets but exceeds expectations. I'm committed to continuous learning and staying ahead of industry trends.</p>
                     <div class="about-stats">
                         <div class="stat">
                             <h4>5+</h4>
-                            <p>Years Experience</p>
+                            <p data-i18n="about.stat1Title">Years Experience</p>
                         </div>
                         <div class="stat">
                             <h4>50+</h4>
-                            <p>Projects Completed</p>
+                            <p data-i18n="about.stat2Title">Projects Completed</p>
                         </div>
                         <div class="stat">
                             <h4>30+</h4>
-                            <p>Happy Clients</p>
+                            <p data-i18n="about.stat3Title">Happy Clients</p>
                         </div>
                     </div>
-                    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+                    <a href="contact.html" class="btn btn-primary" data-i18n="about.contactBtn">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -81,19 +85,19 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Tandogan Erten</h3>
-                    <p>Professional Web Developer & Designer</p>
+                    <p data-i18n="footer.description">Professional Web Developer & Designer</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="footer.quickLinks">Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                        <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Connect</h4>
+                    <h4 data-i18n="footer.connect">Connect</h4>
                     <div class="footer-social">
                         <a href="https://github.com/TandoganErten" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -102,7 +106,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Tandogan Erten. All rights reserved.</p>
+                <p>&copy; 2025 Tandogan Erten. <span data-i18n="footer.rights">All rights reserved.</span></p>
             </div>
         </div>
     </footer>
@@ -111,6 +115,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <script src="translations.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

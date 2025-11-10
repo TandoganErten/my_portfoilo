@@ -21,17 +21,21 @@
             <div class="nav-brand">
                 <a href="index.html">Tandogan Erten</a>
             </div>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+                <button class="lang-btn" data-lang="tr" onclick="setLanguage('tr')">TR</button>
+            </div>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="skills.html" class="nav-link">Skills</a></li>
-                <li><a href="projects.html" class="nav-link active">Projects</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="skills.html" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="projects.html" class="nav-link active" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -39,8 +43,8 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>My Projects</h1>
-            <p>Recent work I'm proud of</p>
+            <h1 data-i18n="projects.pageTitle">My Projects</h1>
+            <p data-i18n="projects.pageSubtitle">Recent work I'm proud of</p>
         </div>
     </section>
 
@@ -56,12 +60,12 @@
                     </video>
                 </div>
                 <div class="featured-info">
-                    <h3>Taner - Affetmedim Kendimi</h3>
-                    <p>Official Music Video - A professional video production showcasing creative direction and post-production expertise.</p>
+                    <h3 data-i18n="projects.videoTitle">Taner - Affetmedim Kendimi</h3>
+                    <p data-i18n="projects.videoDesc">Official Music Video - A professional video production showcasing creative direction and post-production expertise.</p>
                     <div class="project-tags">
-                        <span>Video Production</span>
-                        <span>Post-Production</span>
-                        <span>Creative Direction</span>
+                        <span data-i18n="projects.tag1">Video Production</span>
+                        <span data-i18n="projects.tag2">Post-Production</span>
+                        <span data-i18n="projects.tag3">Creative Direction</span>
                     </div>
                 </div>
             </div>
@@ -77,8 +81,8 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>E-Commerce Platform</h3>
-                        <p>A full-stack e-commerce solution with payment integration, user authentication, and admin dashboard.</p>
+                        <h3 data-i18n="projects.project1Title">E-Commerce Platform</h3>
+                        <p data-i18n="projects.project1Desc">A full-stack e-commerce solution with payment integration, user authentication, and admin dashboard.</p>
                         <div class="project-tags">
                             <span>React</span>
                             <span>Node.js</span>
@@ -96,8 +100,8 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Task Management App</h3>
-                        <p>A responsive task management application with real-time updates and collaborative features.</p>
+                        <h3 data-i18n="projects.project2Title">Task Management App</h3>
+                        <p data-i18n="projects.project2Desc">A responsive task management application with real-time updates and collaborative features.</p>
                         <div class="project-tags">
                             <span>Vue.js</span>
                             <span>Firebase</span>
@@ -115,8 +119,8 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Analytics Dashboard</h3>
-                        <p>An interactive analytics dashboard with data visualization and reporting capabilities.</p>
+                        <h3 data-i18n="projects.project3Title">Analytics Dashboard</h3>
+                        <p data-i18n="projects.project3Desc">An interactive analytics dashboard with data visualization and reporting capabilities.</p>
                         <div class="project-tags">
                             <span>React</span>
                             <span>D3.js</span>
@@ -134,8 +138,8 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Blog Platform</h3>
-                        <p>A modern blogging platform with markdown support, comments, and social sharing features.</p>
+                        <h3 data-i18n="projects.project4Title">Blog Platform</h3>
+                        <p data-i18n="projects.project4Desc">A modern blogging platform with markdown support, comments, and social sharing features.</p>
                         <div class="project-tags">
                             <span>Next.js</span>
                             <span>Tailwind</span>
@@ -153,8 +157,8 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Portfolio Template</h3>
-                        <p>A customizable portfolio template with smooth animations and responsive design.</p>
+                        <h3 data-i18n="projects.project5Title">Portfolio Template</h3>
+                        <p data-i18n="projects.project5Desc">A customizable portfolio template with smooth animations and responsive design.</p>
                         <div class="project-tags">
                             <span>HTML</span>
                             <span>CSS</span>
@@ -172,8 +176,8 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Restaurant Website</h3>
-                        <p>A beautiful restaurant website with online ordering and reservation system.</p>
+                        <h3 data-i18n="projects.project6Title">Restaurant Website</h3>
+                        <p data-i18n="projects.project6Desc">A beautiful restaurant website with online ordering and reservation system.</p>
                         <div class="project-tags">
                             <span>WordPress</span>
                             <span>PHP</span>
@@ -191,19 +195,19 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Tandogan Erten</h3>
-                    <p>Professional Web Developer & Designer</p>
+                    <p data-i18n="footer.description">Professional Web Developer & Designer</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="footer.quickLinks">Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                        <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Connect</h4>
+                    <h4 data-i18n="footer.connect">Connect</h4>
                     <div class="footer-social">
                         <a href="https://github.com/TandoganErten" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -212,7 +216,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Tandogan Erten. All rights reserved.</p>
+                <p>&copy; 2025 Tandogan Erten. <span data-i18n="footer.rights">All rights reserved.</span></p>
             </div>
         </div>
     </footer>
@@ -221,6 +225,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <script src="translations.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
