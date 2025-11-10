@@ -42,17 +42,21 @@
             <div class="nav-brand">
                 <a href="index.html">Tandogan Erten</a>
             </div>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+                <button class="lang-btn" data-lang="tr" onclick="setLanguage('tr')">TR</button>
+            </div>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="skills.html" class="nav-link">Skills</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="skills.html" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="projects.html" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -65,12 +69,12 @@
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Tandogan Erten</span></h1>
-                <p class="hero-subtitle">Professional Web Developer & Designer</p>
-                <p class="hero-description">Crafting beautiful, functional, and user-centered digital experiences</p>
+                <h1 class="hero-title"><span data-i18n="home.greeting">Hi, I'm</span> <span class="highlight" data-i18n="home.name">Tandogan Erten</span></h1>
+                <p class="hero-subtitle" data-i18n="home.title">Professional Web Developer & Designer</p>
+                <p class="hero-description" data-i18n="home.description">Crafting beautiful, functional, and user-centered digital experiences</p>
                 <div class="hero-buttons">
-                    <a href="projects.html" class="btn btn-primary">View My Work</a>
-                    <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+                    <a href="projects.html" class="btn btn-primary" data-i18n="home.viewWork">View My Work</a>
+                    <a href="contact.html" class="btn btn-secondary" data-i18n="home.getInTouch">Get In Touch</a>
                 </div>
                 <div class="social-links">
                     <a href="https://github.com/TandoganErten" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -420,6 +424,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <script src="translations.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
